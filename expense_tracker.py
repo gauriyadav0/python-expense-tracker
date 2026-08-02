@@ -23,14 +23,12 @@ while True:
             continue
 
         category = input("Category like (food, travel, books etc.): ")
-        discription = input("Discription: ")
         amount = input("Amount: ")
 
         expense ={
 
             "date": date,
             "category" : category,
-            "discription" : discription,
             "amount" : amount
 
         }
@@ -46,16 +44,16 @@ while True:
             print("This is all your expense")
             count =1
             for eachSpend in expenseList:
-                print(f"eachSpend {count} -> {eachSpend['date']}, {eachSpend['category']},{eachSpend['discription']},{eachSpend['amount']}")
+                print(f"eachSpend {count} -> {eachSpend['date']}, {eachSpend['category']},{eachSpend['amount']}")
 
                 count= count+1
 
 # View Total spending
  
-    elif(count==3):
+    elif(choice==3):
         total = 0
         for eachSpend in expenseList:
-            total = total + eachSpend['amount']
+            total = total + int(eachSpend['amount'])
 
             print("\n Total spend =", total)
 
